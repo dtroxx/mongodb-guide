@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const PointSchema = new Schema({
-  type: { type: String, defualt: 'Point' },
-  coordinates: {type:  [Number], index: '2dsphere' }
+  coordinates: { type: [Number], index: '2dsphere' },
+  type: { type: String, default: 'Point' }
 });
 
 const DriverSchema = new Schema({
@@ -18,6 +18,6 @@ const DriverSchema = new Schema({
   geometry: PointSchema
 });
 
-const Driver = mongoose.model('driver', DriverSchema)
+const Driver = mongoose.model('driver', DriverSchema);
 
 module.exports = Driver;
