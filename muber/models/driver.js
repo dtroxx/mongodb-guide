@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const PointSchema = new Schema({
   type: { type: String, defualt: 'Point' },
-  coordinates: type: { [Number], index: '2dsphere' }
+  coordinates: {type:  [Number], index: '2dsphere' }
 });
 
 const DriverSchema = new Schema({
